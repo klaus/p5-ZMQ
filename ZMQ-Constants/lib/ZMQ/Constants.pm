@@ -228,7 +228,8 @@ our %EXPORT_TAGS = (
         # only in > 3
         qw(
             ZMQ_ROUTER_MANDATORY
-        ),
+            ),
+
         # only in v2.x
         qw(
             ZMQ_XREQ
@@ -305,6 +306,37 @@ sub get_sockopt_type { $SOCKOPT_MAP{ $_[0] } }
 
 set_sockopt_type(
     "int" => (
+
+        ZMQ_BACKLOG,
+        ZMQ_CONFLATE,
+        ZMQ_CURVE_SERVER,
+        ZMQ_IMMEDIATE,
+        ZMQ_IPV4ONLY,
+        ZMQ_IPV6,
+        ZMQ_MULTICAST_HOPS,
+        ZMQ_PLAIN_SERVER,
+        ZMQ_PROBE_ROUTER,
+        ZMQ_RATE,
+        ZMQ_RCVBUF,
+        ZMQ_RCVHWM,
+        ZMQ_RCVTIMEO,
+        ZMQ_RECONNECT_IVL,
+        ZMQ_RECONNECT_IVL_MAX,
+        ZMQ_RECOVERY_IVL,
+        ZMQ_REQ_CORRELATE,
+        ZMQ_REQ_RELAXED,
+        ZMQ_ROUTER_MANDATORY,
+        ZMQ_ROUTER_RAW,
+        ZMQ_SNDBUF,
+        ZMQ_SNDHWM,
+        ZMQ_SNDTIMEO,
+        ZMQ_TCP_KEEPALIVE,
+        ZMQ_TCP_KEEPALIVE_CNT,
+        ZMQ_TCP_KEEPALIVE_IDLE,
+        ZMQ_TCP_KEEPALIVE_INTVL,
+        ZMQ_XPUB_VERBOSE,
+        ZMQ_LINGER,
+
         ZMQ_TYPE,
         ZMQ_RCVMORE,
         ZMQ_SNDHWM,
@@ -333,8 +365,23 @@ set_sockopt_type( "uint64" => ( ZMQ_AFFINITY, ZMQ_HWM, ) );
 set_sockopt_type(
     "int64" => ( ZMQ_MAXMSGSIZE, ZMQ_RECOVERY_IVL_MSEC, ZMQ_SWAP, ) );
 
-set_sockopt_type( "string" =>
-        ( ZMQ_SUBSCRIBE, ZMQ_UNSUBSCRIBE, ZMQ_LAST_ENDPOINT, ZMQ_IDENTITY, )
+set_sockopt_type(
+    "string" => (
+        ZMQ_SUBSCRIBE,
+        ZMQ_UNSUBSCRIBE,
+        ZMQ_LAST_ENDPOINT,
+        ZMQ_IDENTITY,
+
+        ZMQ_PLAIN_PASSWORD,
+        ZMQ_PLAIN_USERNAME,
+        ZMQ_ZAP_DOMAIN,
+
+        ZMQ_TCP_ACCEPT_FILTER,
+
+        ZMQ_CURVE_PUBLICKEY,
+        ZMQ_CURVE_SECRETKEY,
+        ZMQ_CURVE_SERVERKEY,
+    )
 );
 
 our @CONSTANT_SETS;
